@@ -1,14 +1,19 @@
 {
-  "name": "greeter-bot",
+  "name": "discord_bot",
   "version": "1.0.0",
-  "description": "My First Discord Bot",
   "main": "bot.js",
-  "author": "Your Name",
   "scripts": {
-    "start": "node bot.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshbogen/discord_bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshbogen/discord_bot/issues"
+  },
+  "homepage": "https://github.com/joshbogen/discord_bot#readme",
+  "description": ""
 }
