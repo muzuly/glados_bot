@@ -17,6 +17,7 @@ const hashMap = new HashMap();
 hashMap.set('ping', 'Pong!');
 hashMap.set('foo', 'Bar!');
 hashMap.set('test', 'Pass!');
+hashMap.set('irs', "God! Fuck the IRS! You aren't getting of my bugs!");
 
 // this is the list of random responses
 const randomResponse = new HashMap();
