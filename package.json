@@ -15,5 +15,10 @@
     "url": "https://github.com/joshbogen/discord_bot/issues"
   },
   "homepage": "https://github.com/joshbogen/discord_bot#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^12.2.0",
+    "hashmap": "^2.4.0"
+  }
 }

@@ -1,20 +1,10 @@
-var Discord = require('discord.io');
-var logger = require('winston');
-var auth = require('./auth.json');
+const Discord = require('discord.js');
+//var Discord = require('discord.io');
 var HashMap = require('hashmap');
+const client = new Discord.Client();
 
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(new logger.transports.Console, {
-    colorize: true
-});
-logger.level = 'debug';
-// Initialize Discord Bot
-var bot = new Discord.Client();
-bot.on('ready', function (evt) {
-    logger.info('Connected');
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - (' + bot.id + ')');
+client.on('ready', () => {
+    console.log('I am ready!');
 });
 
 //this is the funcation for getting a random number up to the max
@@ -64,11 +54,11 @@ randomResponse.set(30, 'When is the best time to feed your dog?');
 
 
 // this is the bot listener
-bot.on('message', function (user, userID, channelID, message, evt) {
+client.on('message', message => {
     // if the chat message starts with an bang (!)
-    if (message.substring(0, 1) == '!') {
+    if (message.content.substring(0, 1) == '!') {
         // parse the message and get the vbalues between the ! and the space
-        var cmd = message.substring(1).split(' ')[0];
+        var cmd = message.content.substring(1).split(' ')[0];
         // search the commands for a key that matches
         var response = hashMap.get(cmd);
 
@@ -82,10 +72,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             var response = randomResponse.get(getRandomInt(randomResponse.size));
         }
         //write the response value to the channel
-        bot.sendMessage({
-            to: channelID,
-            message: response
-        });
+        message.reply(response);
      }
 });
 
