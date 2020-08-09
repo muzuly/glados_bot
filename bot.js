@@ -321,7 +321,7 @@ randomResponse.set(289, "Oh William please... Give me a sponge bath.");
 // this is the bot listener
 client.on('message', message => {
     // if the chat message starts with an bang (!)
-    if (message.content.substring(0, 1) == '!') {
+    if (message.content.substring(0, 1) == 'g!') {
         // parse the message and get the vbalues between the ! and the space
         var cmd = message.content.substring(1).split(' ')[0];
         // search the commands for a key that matches
