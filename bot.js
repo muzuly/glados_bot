@@ -16,6 +16,7 @@ function getRandomInt(max) {
 const hashMap = new HashMap();
 hashMap.set('ping', 'Pong!');
 hashMap.set('foo', 'Bar!');
+hashMap.set('foo fum', 'Barstool bop!');
 hashMap.set('test', 'Pass!');
 hashMap.set('irs', "God! Fuck the IRS! You aren't getting of my bugs!");
 
