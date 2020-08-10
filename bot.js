@@ -7,21 +7,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-static void UpdatePresence()
-{
-    DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.state = "Playing Gex: Enter the Geko";
-    discordPresence.startTimestamp = 0;
-    discordPresence.endTimestamp = 0;
-    discordPresence.largeImageText = "Numbani";
-    discordPresence.smallImageText = "Rogue - Level 100";
-    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-    discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
-    discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
-    Discord_UpdatePresence(&discordPresence);
-}
-
 //this is the funcation for getting a random number up to the max
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
