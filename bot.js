@@ -336,10 +336,17 @@ client.on('message', message => {
         } else if (cmd == 'quote') {
             // if not a key then grab a random from the random response
             var response = randomResponse.get(getRandomInt(randomResponse.size));
+        } else if (cmd == 'quip') {
+            // if not a key then grab a random from the random response
+            var response = randomResponse.get(getRandomInt(randomResponse.size));
+        } else if (cmd == 'random
+                  ') {
+            // if not a key then grab a random from the random response
+            var response = randomResponse.get(getRandomInt(randomResponse.size));
        }
         //write the response value to the channel
      if(response) {
-        message.reply(response);
+        message.send(response);
      }
     }
 });
