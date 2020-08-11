@@ -332,15 +332,14 @@ client.on('message', message => {
             // USE THE HASH RESPONSE
         } else if (cmd == 'help') {
             // the keyword help will list the command keys
-            var response = 'Try one of these: \n \n !' + hashMap.keys().join('\n !')
+            var response = 'Try one of these: \n !quote !' + hashMap.keys().join('\n !')
         } else if (cmd == 'quote') {
             // if not a key then grab a random from the random response
             var response = randomResponse.get(getRandomInt(randomResponse.size));
        }
         //write the response value to the channel
-       if(response) {
-          message.reply(response);
-       }
+     if(response) {
+        message.reply(response);
      }
 });
 
