@@ -424,7 +424,7 @@ client.on('message', message => {
             // USE THE HASH RESPONSE
         } else if (cmd == 'help') {
             // the keyword help will list the command keys
-            var response = '!quote/quip/random \n !charecters'
+            var response = '!quote/quip/random \n !' + hashMap.keys().join('\n !')
             exampleEmbed.setTitle('Try one of these...');
         } else if (cmd == 'quote') {
             // if not a key then grab a random from the random response
