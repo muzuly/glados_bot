@@ -345,7 +345,14 @@ client.on('message', message => {
        }
         //write the response value to the channel
      if(response) {
-        message.channel.send(response);
+        message.channel.send(({embed: {
+  color: 3447003,
+  description: "A very simple Embed!"
+}});
+            
+            
+            
+            response);
      }
     }
 });
