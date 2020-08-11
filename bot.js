@@ -319,6 +319,17 @@ randomResponse.set(286, "So this is New Jersey.");
 randomResponse.set(287, "Evening, Mr Picasso!");
 randomResponse.set(288, "To boldy go... I'm scared!");
 randomResponse.set(289, "Oh William please... Give me a sponge bath.");
+randomResponse.set(290, "It's tail time!");
+randomResponse.set(291, "Now that's what I call gettin' some tail!");
+randomResponse.set(292, "He's dead Jim.");
+randomResponse.set(293, "This one's for Johnny!");
+randomResponse.set(294, "This is for Keith Moon!");
+randomResponse.set(295, "This for Mr. Sinatra.");
+randomResponse.set(296, "Swingin' baby!");
+randomResponse.set(297, "Hey look, SNL!");
+randomResponse.set(298, "Hey... reruns of Rhoda.");
+randomResponse.set(299, "Kill your TV man.");
+randomResponse.set(300, "Null");
 
 // this is the bot listener
 client.on('message', message => {
