@@ -339,8 +339,7 @@ client.on('message', message => {
         } else if (cmd == 'quip') {
             // if not a key then grab a random from the random response
             var response = randomResponse.get(getRandomInt(randomResponse.size));
-        } else if (cmd == 'random
-                  ') {
+        } else if (cmd == 'random') {
             // if not a key then grab a random from the random response
             var response = randomResponse.get(getRandomInt(randomResponse.size));
        }
