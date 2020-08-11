@@ -343,11 +343,11 @@ client.on('message', message => {
             // if not a key then grab a random from the random response
             var response = randomResponse.get(getRandomInt(randomResponse.size));
        }
-        //write the response value to the channel
-     if(response) {
-        message.channel.send(reponse);
-
-     }
+       //write the response value to the channel
+       if(response) {
+           const exampleEmbed = new Discord.MessageEmbed().setTitle('Gex Says...').setDescription(response).setColor('#7289da');
+           message.channel.send(exampleEmbed);
+       }
     }
 });
 
