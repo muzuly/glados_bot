@@ -345,7 +345,7 @@ client.on('message', message => {
        }
         //write the response value to the channel
      if(response) {
-        message.reply(response);
+        message.channel.send(response);
      }
     }
 });
