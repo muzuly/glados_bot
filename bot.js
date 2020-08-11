@@ -336,7 +336,6 @@ client.on('message', message => {
         } else if (cmd == 'quote') {
             // if not a key then grab a random from the random response
             var response = randomResponse.get(getRandomInt(randomResponse.size));
-        } else {
        
         //write the response value to the channel
         message.reply(response);
