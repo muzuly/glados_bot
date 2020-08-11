@@ -14,6 +14,7 @@ function getRandomInt(max) {
 
 // this is the list of key word respones (question / answers)
 const hashMap = new HashMap();
+hashMap.set('alfred', "Alfred is Gex's butler and acts as the information provider in Gex 3: Deep Cover Gecko. He is usually found standing around in the Gex Cave, but can also be found in various parts of levels as well. He was voiced by Marc Silk.");
 hashMap.set('chair', "One of the basic pieces of furniture, a chair is a type of seat. Its primary features are two pieces of a durable material, attached as back and seat to one another at a 90° or slightly greater angle, with usually the four corners of the horizontal seat attached in turn to four legs—or other parts of the seat's underside attached to three legs or to a shaft about which a four-arm turnstile on rollers can turn—strong enough to support the weight of a person who sits on the seat (usually wide and broad enough to hold the lower body from the buttocks almost to the knees) and leans against the vertical back (usually high and wide enough to support the back to the shoulder blades). The legs are typically high enough for the seated person's thighs and knees to form a 90° or lesser angle. Used in a number of rooms in homes (e.g. in living rooms, dining rooms, and dens), in schools and offices (with desks), and in various other workplaces, chairs may be made of wood, metal, or synthetic materials, and either the seat alone or the entire chair may be padded or upholstered in various colors and fabrics. Chairs vary in design. An armchair has armrests fixed to the seat; a recliner is upholstered and under its seat is a mechanism that allows one to lower the chair's back and raise into place a fold-out footrest; a rocking chair has legs fixed to two long curved slats; a wheelchair has wheels fixed to an axis under the seat.");
 hashMap.set('cuz', "Cuz, as his name implies, is Gex's cousin. He is an overweight leopard gecko who wears a Hawaiian shirt. He was captured by the gangsters of 'Gangster TV' on Rez's orders, and placed in a cage on a ship in the harbor. Gex eventually managed to free his cousin as part of a mission in that level, unlocking him for use in the secret levels");
 hashMap.set('gex', "Gex the Gecko is the main protagonist of the Gex series. He is addicted to television, lives in Maui and is a secret agent. He is sent to defeat enemies, lead by the main antagonist, Rez.");
@@ -23,9 +24,6 @@ hashMap.set('xtra', "She is a secret agent, head of the TV Terrorist Defense Uni
 hashMap.set('foo', 'Bar!');
 hashMap.set('ping', 'Pong!');
 hashMap.set('test', 'Pass!');
-
-const hashMap = new Hashmap();
-hashMap.set('alfred', "Alfred is Gex's butler and acts as the information provider in Gex 3: Deep Cover Gecko. He is usually found standing around in the Gex Cave, but can also be found in various parts of levels as well. He was voiced by Marc Silk.");
 
 
 
