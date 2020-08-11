@@ -327,12 +327,14 @@ client.on('message', message => {
         var cmd = message.content.substring(1).split(' ')[0];
         // search the commands for a key that matches
         var response = hashMap.get(cmd);
+        const exampleEmbed = new Discord.MessageEmbed().setTitle('Gex Says...').setColor('#7289da');
 
         if(response) {
             // USE THE HASH RESPONSE
         } else if (cmd == 'help') {
             // the keyword help will list the command keys
-            var response = 'Try one of these: \n \n !quote \n !' + hashMap.keys().join('\n !')
+            var response = '!quote \n !' + hashMap.keys().join('\n !')
+            exampleEmbed.setTitle('Try one of these...');
         } else if (cmd == 'quote') {
             // if not a key then grab a random from the random response
             var response = randomResponse.get(getRandomInt(randomResponse.size));
@@ -345,7 +347,7 @@ client.on('message', message => {
        }
        //write the response value to the channel
        if(response) {
-           const exampleEmbed = new Discord.MessageEmbed().setTitle('Gex Says...').setDescription(response).setColor('#7289da');
+           exampleEmbed.setDescription(response)
            message.channel.send(exampleEmbed);
        }
     }
