@@ -341,6 +341,7 @@ client.on('message', message => {
      if(response) {
         message.reply(response);
      }
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
