@@ -338,7 +338,9 @@ client.on('message', message => {
             var response = randomResponse.get(getRandomInt(randomResponse.size));
        }
         //write the response value to the channel
-        message.reply(response);
+       if(response) {
+          message.reply(response);
+       }
      }
 });
 
