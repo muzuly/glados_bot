@@ -422,7 +422,7 @@ client.on('message', message => {
         var cmd = message.content.substring(1).split(' ')[0];
         // search the commands for a key that matches
         var response = hashMap.get(cmd);
-        const exampleEmbed = new Discord.MessageEmbed().setTitle('Gex Says...').setColor('#7289da');
+        const exampleEmbed = new Discord.MessageEmbed().setTitle('Gex Says...').setColor('#66CC33');
 
         if(response) {
             // USE THE HASH RESPONSE
