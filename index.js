@@ -12,7 +12,7 @@ client.on("ready", () => {
 function handleUploads() {
     if (client.db.fetch(`postedVideos`) === null) client.db.set(`postedVideos`, []);
     setInterval(() => {
-        client.request.parseURL(`https://www.youtube.com/feeds/videos.xml?channel_id=${client.config.channel_id}`)
+        client.request.parseURL(`https://www.youtube.com/feeds/videos.xml?channel_id=UCSno8tzyog9aYwVFtZmcTNQ`)
         .then(data => {
             if (client.db.fetch(`postedVideos`).includes(data.items[0].link)) return;
             else {
