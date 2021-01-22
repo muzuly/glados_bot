@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 //var Discord = require('discord.io');
 var HashMap = require('hashmap');
@@ -5,6 +6,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+    require("./index.js");
 });
 
 //this is the funcation for getting a random number up to the max
@@ -19,7 +21,7 @@ hashMap.set('chair', "One of the basic pieces of furniture, a chair is a type of
 hashMap.set('cuz', "Cuz, as his name implies, is Gex's cousin. He is an overweight leopard gecko who wears a Hawaiian shirt. He was captured by the gangsters of 'Gangster TV' on Rez's orders, and placed in a cage on a ship in the harbor. Gex eventually managed to free his cousin as part of a mission in that level, unlocking him for use in the secret levels");
 hashMap.set('gex', "Gex the Gecko is the main protagonist of the Gex series. He is addicted to television, lives in Maui and is a secret agent. He is sent to defeat enemies, lead by the main antagonist, Rez.");
 hashMap.set('irs', "God! To hell with th IRS! You aren't getting any of my bugs!");
-hashMap.set('rex', "Rex is Gex's prehistoric ancestor. He is a small red dinosaur from prehistoric times. Rez froze him in a block of ice inside of a cave in the 'Holiday Broadcasting' level. If Gex goes into the cave and thaws Rex out, he unlocks him as a playable character in the secret missions."); 
+hashMap.set('rex', "Rex is Gex's prehistoric ancestor. He is a small red dinosaur from prehistoric times. Rez froze him in a block of ice inside of a cave in the 'Holiday Broadcasting' level. If Gex goes into the cave and thaws Rex out, he unlocks him as a playable character in the secret missions.");
 hashMap.set('xtra', "She is a secret agent, head of the TV Terrorist Defense Unit, and Gex's love interest/partner. She plays a bigger role in Deep Cover Gecko where she is kidnapped by Rez to get to Gex. Throughout the game, Gex constantly flirts with her and she repeatedly turns him down. After Gex rescues her from Rez, she accepts his love.");
 hashMap.set('foo', 'Bar!');
 hashMap.set('ping', 'Pong!');
