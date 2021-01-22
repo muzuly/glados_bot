@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 client.db = require("quick.db");
 client.request = new (require("rss-parser"))();
-client.config = require("config.js");
+client.config = require("./config.js");
 
 client.on("ready", () => {
     console.log("I'm ready also!");
