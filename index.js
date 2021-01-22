@@ -10,15 +10,15 @@ client.on("ready", () => {
 });
 
 function handleUploads() {
-    if (client.db.fetch(`postedVideos`) === null) client.db.set(`postedVideos`, []);
+    if (client.db.fetch('postedVideos') === null) client.db.set('postedVideos', []);
     setInterval(() => {
-        client.request.parseURL(`https://www.youtube.com/feeds/videos.xml?channel_id=UCSno8tzyog9aYwVFtZmcTNQ`)
-        .then(data => {
-            if (client.db.fetch(`postedVideos`).includes(data.items[0].link)) return;
+        client.request.parseURL('https://www.youtube.com/feeds/videos.xml?channel_id=UCSno8tzyog9aYwVFtZmcTNQ').then((data) => {
+            if (client.db.fetch('postedVideos').includes(data.items[0].link)) return;
             else {
-                client.db.set(`videoData`, data.items[0]);
+                console.log("the bot found a video.");
+                client.db.set('videoData', data.items[0]);
                 client.db.push("postedVideos", data.items[0].link);
-                let parsed = client.db.fetch(`videoData`);
+                let parsed = client.db.fetch('videoData');
                 let channel = client.channels.cache.get(client.config.channel);
                 if (!channel) return;
                 let message = client.config.messageTemplate
