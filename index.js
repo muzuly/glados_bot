@@ -38,5 +38,3 @@ function checkForUploads() {
 }
 
 client.login(process.env.BOT_TOKEN);
-
-741657541846630542

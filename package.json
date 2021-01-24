@@ -1,5 +1,5 @@
 {
-  "name": "discord_bot",
+  "name": "glados_bot",
   "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshbogen/discord_bot.git"
+    "url": "git+https://github.com/muzuly/glados_bot.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joshbogen/discord_bot/issues"
+    "url": "https://github.com/muzuly/glados_bot/issues"
   },
-  "homepage": "https://github.com/joshbogen/discord_bot#readme",
+  "homepage": "https://github.com/muzuly/glados_bot#readme",
   "description": "",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",

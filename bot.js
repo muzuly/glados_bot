@@ -38,7 +38,7 @@ hashMap.set('test', 'Pass!');
 // BOT LISTENER
 client.on('message', message => {
     // IF THE CHAT MESSAGE STARTS WITH A BANG (>)
-    if (message.content.substring(0, 1) == '!') {
+    if (message.content.substring(0, 1) == '>') {
         // PARSE THE MESSAGE AND GET THE VALUES BETWEEN THE BANG AND THE SPACE
         var cmd = message.content.substring(1).split(' ')[0];
         // SEARCH THE COMMAND FOR A KEY THAT MATCHES
@@ -49,7 +49,7 @@ client.on('message', message => {
             // USE THE HASH RESPONSE
         } else if (cmd == 'help') {
             // KEYBWORD HELP WILL LIST THE COMMAND KEYS
-            var response = '!quote/quip/random \n !' + hashMap.keys().join('\n !')
+            var response = '>quote/quip/random \n >' + hashMap.keys().join('\n !')
             exampleEmbed.setTitle('Try one of these...');
         } else if (cmd == 'quote') {
             // IF NOT A KEY THEN GRAB A RANDOM FROM THE RESPONSE
