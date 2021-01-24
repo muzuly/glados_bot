@@ -49,7 +49,7 @@ client.on('message', message => {
             // USE THE HASH RESPONSE
         } else if (cmd == 'help') {
             // KEYBWORD HELP WILL LIST THE COMMAND KEYS
-            var response = '>quote/quip/random \n >' + hashMap.keys().join('\n !')
+            var response = '>quote/quip/random \n >' + hashMap.keys().join('\n >')
             exampleEmbed.setTitle('Try one of these...');
         } else if (cmd == 'quote') {
             // IF NOT A KEY THEN GRAB A RANDOM FROM THE RESPONSE
