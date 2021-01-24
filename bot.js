@@ -45,12 +45,6 @@ client.on('message', message => {
             // KEYBWORD HELP WILL LIST THE COMMAND KEYS
             var response = hashMap.keys().join('\n >')
             exampleEmbed.setTitle('Try one of these...');
-        } else if (cmd == 'quote') {
-            // IF NOT A KEY THEN GRAB A RANDOM FROM THE RESPONSE
-            var response = randomResponse.get(getRandomInt(randomResponse.size));
-        } else if (cmd == 'quip') {
-            // IF NOT A KEY THEN GRAB A RANDOM FROM THE RESPONSE
-            var response = randomResponse.get(getRandomInt(randomResponse.size));
         } else if (cmd == 'random') {
             // IF NOT A KEY THEN GRAB A RANDOM FROM THE RESPONSE
             var response = randomResponse.get(getRandomInt(randomResponse.size));
