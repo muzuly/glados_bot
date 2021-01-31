@@ -20,7 +20,7 @@ hashMap.set('chair', "One of the basic pieces of furniture, a chair is a type of
 hashMap.set('foo', 'Bar!');
 hashMap.set('ping', 'Pong!');
 hashMap.set('test', 'Pass!');
-hashMap.set('suckmynuts', 'I mean... :embarrassed:');
+hashMap.set('suckmynuts', 'I mean... :flushed:');
 
 
 
