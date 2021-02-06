@@ -1,4 +1,4 @@
-
+// MUZULY
 const Discord = require('discord.js');
 //var Discord = require('discord.io');
 var HashMap = require('hashmap');
