@@ -7,7 +7,7 @@ client.db = require("quick.db");
 client.config = require("./config.js");
 
 client.on("ready", () => {
-    console.log("I'm ready also!");
+    console.log("YouTube rss function is reading...");
     checkForUploads();
 });
 
@@ -17,22 +17,26 @@ function checkForUploads() {
         const url = "https://www.youtube.com/feeds/videos.xml?channel_id=" + client.config.channel_id;
 
         parser.parseURL(url, function(err, data) {
-            if (client.db.fetch('postedVideos').includes(data.items[0].link)) return;
-            else {
-                console.log("the bot found a video.");
+            channel_feed = data.items;
 
-                client.db.set('videoData', data.items[0]);
-                client.db.set('postedVideos', data.items[0].link);
-                let channel = client.channels.cache.get(client.config.discord_channel_id);
-                let parsed = client.db.fetch('videoData');
+            if(channel_feed.length < 1 || channel_feed == undefined) {
+                console.log('empty or missing feed.')
+            } else {
+                channel_feed.forEach(function(item) {
+                    const recent_post = Date(item.published) <= (new Date() - 300_000)
+                    if (!client.db.has(item.id) && recent_post) {
+                        console.log("the bot found a new video:" + item.id);
+                        client.db.set(item.id, item);
 
-                let message = client.config.messageTemplate
-                    .replace(/{author}/g, parsed.author)
-                    .replace(/{title}/g, Discord.Util.escapeMarkdown(parsed.title))
-                    .replace(/{url}/g, parsed.link);
-                channel.send(message);
+                        let channel = client.channels.cache.get(client.config.discord_channel_id);
+                        let message = client.config.messageTemplate
+                            .replace(/{author}/g, item.author)
+                            .replace(/{title}/g, Discord.Util.escapeMarkdown(item.title))
+                            .replace(/{url}/g, item.link);
+                        channel.send(message);
+                    }
+                })
             }
-
         })
     }, client.config.watchInterval);
 }
